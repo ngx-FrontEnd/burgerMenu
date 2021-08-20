@@ -9,6 +9,7 @@ import { InnerHomeComponent } from './inner-home/inner-home.component';
 
 import { RouterModule, Routes } from '@angular/router';
 import { InnerAboutComponent } from './inner-about/inner-about.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 const routes: Routes = [
   {
@@ -16,6 +17,7 @@ const routes: Routes = [
     children: [
 
       { path: '', component: InnerHomeComponent },
+      { path: 'innerhome', component: InnerHomeComponent },
       { path: 'innerabout', component: InnerAboutComponent },
     ]
   }
@@ -27,6 +29,7 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     CommonModule,
     MaterialModel,
+    FlexLayoutModule,
     // InnerMenuRouting
   ],
   declarations: [InnerMenuComponent, InnerSidenavComponent, InnerHeaderComponent, InnerHomeComponent]
