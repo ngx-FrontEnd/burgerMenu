@@ -1,0 +1,41 @@
+<div fxLayout fxLayoutAlign="center start">
+
+  <div style="height: 80vh;" fxFlex.gt-md='80' fxFlex.lt-md='90' fxFlex.md='90'>
+
+    <mat-toolbar color="accent">
+      <div class="left" fxHide.gt-md='true'>
+        <button mat-icon-button fxHide.gt-md='true' (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span>{{menuName}}</span>
+
+      </div>
+      <div class='right' fxHide.lt-md='true' fxHide.md='true' *ngFor="let i of menu" fxLayout="row"
+        fxLayoutAlign="center start">
+        <mat-nav-list>
+          <a routerLink="{{i.link}}" routerLinkActive="router-link-active" mat-list-item>{{i.label}}</a>
+        </mat-nav-list>
+      </div>
+    </mat-toolbar>
+
+    <!-- <div fxHide.lt-md>
+      <router-outlet></router-outlet>
+    </div> -->
+
+    <!-- <mat-sidenav-container fxFlexFill fxHide.gt-md='true' style="height: 400px;"> -->
+    <mat-sidenav-container fxFlexFill>
+      <mat-sidenav #sidenav style="width: 250px;">
+        <mat-nav-list *ngFor="let i of menu">
+          <a routerLink="{{i.link}}" mat-list-item (click)="getName(i.label); sidenav.close()">{{i.label}}</a>
+        </mat-nav-list>
+      </mat-sidenav>
+      <mat-sidenav-content fxFlexFill>
+        <router-outlet></router-outlet>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+
+
+
+  </div>
+
+</div>

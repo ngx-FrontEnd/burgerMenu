@@ -6,8 +6,8 @@
     <mat-icon>assignment_ind</mat-icon> <span class="nav-caption">about</span>
   </a> -->
   <ng-container *ngFor="let i of menu">
-    <a (click)='getMenu(i.item)' mat-list-item [routerLink]="i.link" (click)="onSidenavClose()">
-      <mat-icon>assignment_ind</mat-icon> <span class="nav-caption">{{i.item}}</span>
+    <a (click)='getMenu(i.label)' mat-list-item routerLink="{{i.link}}" (click)="onSidenavClose()">
+      <mat-icon>assignment_ind</mat-icon> <span class="nav-caption">{{i.label}}</span>
     </a>
   </ng-container>
 

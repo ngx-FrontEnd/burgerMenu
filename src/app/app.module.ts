@@ -9,20 +9,26 @@ import { MaterialModel } from './material.module';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { HomeComponent } from './home/home.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { AboutComponent } from './about/about.component';
+import { DownloadComponent } from './download/download.component';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     SidenavComponent,
-    HomeComponent
+    HomeComponent,
+    AboutComponent,
+    DownloadComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MaterialModel,
     BrowserAnimationsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
 
   ],
   providers: [],

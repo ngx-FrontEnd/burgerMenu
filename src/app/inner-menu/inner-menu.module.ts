@@ -15,13 +15,12 @@ const routes: Routes = [
   {
     path: '', component: InnerMenuComponent,
     children: [
-
       { path: '', component: InnerHomeComponent },
       { path: 'innerhome', component: InnerHomeComponent },
       { path: 'innerabout', component: InnerAboutComponent },
     ]
-  }
-  // { path: '', redirectTo: '/innerhome', pathMatch: 'full' },
+  },
+  { path: '', redirectTo: '/innerhome', pathMatch: 'full' },
 
 ];
 @NgModule({
@@ -29,14 +28,14 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     CommonModule,
     MaterialModel,
-    FlexLayoutModule,
+    FlexLayoutModule
     // InnerMenuRouting
   ],
   declarations: [InnerMenuComponent, InnerSidenavComponent, InnerHeaderComponent, InnerHomeComponent]
 })
 export class InnerMenuModule {
-  // constructor() {
-  //   console.log("Inner Menu");
+  constructor() {
+    console.log("Inner Menu");
 
-  // }
+  }
 }

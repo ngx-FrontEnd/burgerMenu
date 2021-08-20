@@ -11,8 +11,9 @@ export class InnerSidenavComponent implements OnInit {
   @Output() manuName = new EventEmitter();
 
   menu = [
-    { item: 'Home', link: '/innermenu/innerhome' },
-    { item: 'About', link: '/innermenu/innerabout' },
+    { label: 'Home', link: '/innermenu/innerhome' },
+    { label: 'About', link: '/innermenu/innerabout' },
+    { label: 'Download', link: '/innermenu/innerdownload' },
   ];
   constructor() { }
 
