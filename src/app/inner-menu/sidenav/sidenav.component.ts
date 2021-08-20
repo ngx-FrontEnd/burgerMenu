@@ -8,14 +8,26 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 export class InnerSidenavComponent implements OnInit {
 
   @Output() sidenavClose = new EventEmitter();
+  @Output() manuName = new EventEmitter();
 
+  menu = [
+    { item: 'Home', link: '/innermenu/innerhome' },
+    { item: 'About', link: '/innermenu/innerabout' },
+  ];
   constructor() { }
 
-  ngOnInit() {
-  }
 
   public onSidenavClose = () => {
     this.sidenavClose.emit();
+  }
+
+  public getMenu = (item: any) => {
+    // console.log(item);
+    this.manuName.emit(item);
+  }
+
+  ngOnInit() {
+
   }
 
 }

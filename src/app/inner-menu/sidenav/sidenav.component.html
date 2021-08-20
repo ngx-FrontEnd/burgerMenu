@@ -1,8 +1,14 @@
 <mat-nav-list>
-  <a mat-list-item routerLink="/innermenu/innerhome" (click)="onSidenavClose()">
-    <mat-icon>home</mat-icon> <span>Home</span>
+  <!-- <a mat-list-item routerLink="/innermenu/innerhome" (click)="onSidenavClose()">
+    <mat-icon>home</mat-icon> <span class="nav-caption">Home</span>
   </a>
   <a mat-list-item routerLink="/innermenu/innerabout" (click)="onSidenavClose()">
-    <mat-icon>assignment_ind</mat-icon> <span>about</span>
-  </a>
+    <mat-icon>assignment_ind</mat-icon> <span class="nav-caption">about</span>
+  </a> -->
+  <ng-container *ngFor="let i of menu">
+    <a (click)='getMenu(i.item)' mat-list-item [routerLink]="i.link" (click)="onSidenavClose()">
+      <mat-icon>assignment_ind</mat-icon> <span class="nav-caption">{{i.item}}</span>
+    </a>
+  </ng-container>
+
 </mat-nav-list>

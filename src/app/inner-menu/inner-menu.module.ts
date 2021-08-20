@@ -35,8 +35,8 @@ const routes: Routes = [
   declarations: [InnerMenuComponent, InnerSidenavComponent, InnerHeaderComponent, InnerHomeComponent]
 })
 export class InnerMenuModule {
-  constructor() {
-    console.log("Inner Menu");
+  // constructor() {
+  //   console.log("Inner Menu");
 
-  }
+  // }
 }

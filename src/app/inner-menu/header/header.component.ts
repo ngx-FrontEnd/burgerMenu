@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-inner-header',
@@ -7,7 +7,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class InnerHeaderComponent implements OnInit {
   @Output() public sidenavToggle = new EventEmitter();
-
+  @Input() menuName: any;
   constructor() { }
 
   ngOnInit(): void {

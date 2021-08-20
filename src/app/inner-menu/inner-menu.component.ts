@@ -8,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class InnerMenuComponent implements OnInit {
 
   constructor() { }
+  menuName: any;
+  setMenuName = (data: any) => this.menuName = data;
 
   ngOnInit() {
+    this.menuName = 'Home';
   }
 
 }
